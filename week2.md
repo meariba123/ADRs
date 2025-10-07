@@ -79,7 +79,7 @@ The diagram below shows the high-level system context for the Customer Managemen
 It illustrates how different external users and systems interact with the CMS through defined communication channels.  
 The CMS acts as the central hub for managing support tickets, problem resolution, and user roles.  
 External interactions include a web browser interface for end-users and an external notification service (Email/SMS) for sending updates.
-C4 Level 1 Diagram:
+
 <img width="1110" height="902" alt="image" src="https://github.com/user-attachments/assets/9d6cff14-e8cb-49f7-9dbf-c4b86094642f" />
 
 *Figure 1: C4 Level 1 Context Diagram for the Customer Management System.*
