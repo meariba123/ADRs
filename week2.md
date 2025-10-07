@@ -8,7 +8,7 @@ I also began creating the C4 Level 1 diagram to show the system’s overall cont
 
 ## ADR 001 – Chosen Architectural Style
 
-**Date:** 2025-10-07  
+**Date:** 02-10-2025   
 **Status:** Accepted  
 
 **Context:**  
@@ -29,7 +29,7 @@ This supports future scalability and makes debugging easier.
 
 ## ADR 002 – Database Choice
 
-**Date:** 2025-10-07  
+**Date:** 02-10-2025  
 **Status:** Accepted  
 
 **Context:**  
