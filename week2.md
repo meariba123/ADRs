@@ -12,11 +12,11 @@ I also began creating the C4 Level 1 diagram to show the system’s overall cont
 **Status:** Accepted  
 
 **Context:**  
-We needed to choose an architectural style for the Customer Management System (CMS). Options included Monolithic, Microservices, and Layered Architecture.  
+I needed to choose an architectural style for the Customer Management System (CMS). Options included Monolithic, Microservices, and Layered Architecture.  
 The CMS will manage user roles, problem reports, and notifications, so structure and maintainability are important.
 
 **Decision:**  
-We chose the **Layered Architecture** approach because it clearly separates responsibilities into layers (UI, business logic, and data access).  
+I chose the **Layered Architecture** approach because it clearly separates responsibilities into layers (UI, business logic, and data access).  
 This supports future scalability and makes debugging easier.
 
 **Consequences:**  
