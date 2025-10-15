@@ -80,7 +80,7 @@ It illustrates how different external users and systems interact with the CMS th
 The CMS acts as the central hub for managing support tickets, problem resolution, and user roles.  
 External interactions include a web browser interface for end-users and an external notification service (Email/SMS) for sending updates.
 
-<img width="1110" height="902" alt="image" src="https://github.com/user-attachments/assets/9d6cff14-e8cb-49f7-9dbf-c4b86094642f" />
+<img width="1540" height="956" alt="image" src="https://github.com/user-attachments/assets/9ac29e6a-b65d-46c7-8001-dbc6ddceaf02" />
 
 *Figure 1: C4 Level 1 Context Diagram for the Customer Management System.*
 
