@@ -34,12 +34,12 @@ static/
 docs/
 - adr/
 
-
 **Consequences:**
 - Keeps files tidy and easy to navigate.
 - Makes collaboration and debugging simpler.
 - Separates the frontend, backend, and documentation layers.
 
+---
 ## ADR 012 – Database Integration Setup
 
 **Date:** 26-10-2025
@@ -56,15 +56,17 @@ I created a dedicated database.py file to manage a single MongoDB connection usi
 - Makes connection management easier.
 - Simplifies future maintenance or migrations.
 
+--- 
+
 ## ADR 013 – RESTful Route Structure
 
-Date: 26-10-2025
-Status: Accepted
+**Date:** 26-10-2025
+**Status:** Accepted
 
-Context:
+**Context:**
 Routes were needed to handle different system actions such as creating complaints, viewing updates, and generating reports.
 
-Decision:
+**Decision:**
 I created RESTful endpoints for each feature:
 
 /api/users – Manage users
@@ -75,52 +77,45 @@ I created RESTful endpoints for each feature:
 
 /api/reports – Generate reports
 
-Consequences:
+**Consequences:**
+- Follows a consistent REST structure.
+- Simplifies testing and integration with the frontend.
+- Easy to extend with more endpoints later.
 
-Follows a consistent REST structure.
+---
 
-Simplifies testing and integration with the frontend.
+## ADR 014 – Role-Based Access in Routes
 
-Easy to extend with more endpoints later.
+**Date:** 26-10-2025
+**Status:** Accepted
 
-ADR 014 – Role-Based Access in Routes
-
-Date: 26-10-2025
-Status: Accepted
-
-Context:
+**Context:**
 Different roles require different access rights. Consumers can log complaints, while managers and agents have extra permissions.
 
-Decision:
+**Decision:**
 I used Flask-Login for session-based authentication and added role checks before certain actions. Roles are stored in the database and verified during login.
 
-Consequences:
+**Consequences:**
+- Protects sensitive data and routes.
+- Prevents unauthorised access.
+- Adds a small amount of complexity to route handling.
 
-Protects sensitive data and routes.
+---
 
-Prevents unauthorised access.
+## ADR 015 – JSON Response Format
 
-Adds a small amount of complexity to route handling.
+**Date:** 26-10-2025
+**Status:** Accepted
 
-ADR 015 – JSON Response Format
+**Context:**
+The system must communicate smoothly between the backend and frontend, and responses need to be validated before frontend integration.
 
-Date: 26-10-2025
-Status: Accepted
-
-Context:
-The system must communicate smoothly between the backend and frontend.
-
-Decision:
+**Decision:**
 I standardised all backend responses using Flask’s jsonify() function so data is returned in JSON format.
+Postman was used to test these endpoints, ensuring they return valid, serialisable JSON objects and correct status codes.
 
-Consequences:
-
-Easy for frontend JavaScript to handle.
-
-Improves consistency and debugging.
-
-Enables future expansion into a mobile or single-page interface.
-
-Reflection
-
-By the end of Week 5, the project moved from planning to development. The database, route design, and authentication setup were all clearly defined. These decisions create a solid foundation for coding the backend and testing the first working version of the CMS.
+**Consequences:**
+- Easy for frontend JavaScript to handle.
+- Simplifies debugging via Postman response inspection.
+- Confirms the API endpoints behave correctly before frontend integration.
+- Enables future expansion into a mobile or single-page interface.
