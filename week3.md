@@ -15,10 +15,10 @@ The CMS needs smooth and reliable communication between the frontend (web browse
 A RESTful API structure was chosen for client-server communication. This design keeps the frontend and backend loosely connected, allowing for easier future integration with mobile or other platforms.
 
 **Pros:**  
-- Maintains a clear separation between frontend and backend.
-- Easier to scale and extend to other interfaces, such as mobile apps.
-- Requires defining and testing dedicated API routes for CRUD operations.
-- Involves slightly more setup than basic page rendering.
+- Maintains a clear separation between frontend and backend
+- Easier to scale and extend to other interfaces, such as mobile apps
+- Requires defining and testing dedicated API routes for CRUD operations
+- Involves slightly more setup than basic page rendering
 
 ---
 
@@ -53,7 +53,7 @@ The CMS must include several dashboards (for Consumers, Agents, Managers, and Ad
 A multi-page layout using HTML, CSS, and JavaScript templates rendered through Flask was selected. Each user role has its own dashboard wireframe showing key actions, for example, “Report Problem” for Consumers and “Assign Support Person” for Agents.
 
 **Pros:**
-- Easier to design and test wireframes specific to each role.
-- Integrates smoothly with Flask’s Jinja2 template engine.
-- Less dynamic than a React single-page application.
-- Quicker to implement and suitable for the project’s timeframe.
+- Easier to design and test wireframes specific to each role
+- Integrates smoothly with Flask’s Jinja2 template engine
+- Less dynamic than a React single-page application
+- Quicker to implement and suitable for the project’s timeframe
