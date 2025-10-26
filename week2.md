@@ -19,7 +19,7 @@ The CMS will manage user roles, problem reports, and notifications, so structure
 I chose the **Layered Architecture** approach because it clearly separates responsibilities into layers (UI, business logic, and data access).  
 This supports future scalability and makes debugging easier.
 
-**Consequences:**  
+**Pros:**  
 - Easier maintenance and unit testing  
 - Supports future scalability and modular design  
 - Can introduce slight overhead for smaller systems  
@@ -39,7 +39,7 @@ I considered MongoDB (NoSQL) and MySQL (SQL). MongoDB provides flexible document
 **Decision:**  
 I selected MongoDB as the main database because it works well with Python (Flask), stores data in JSON-like format, and is scalable for future needs.
 
-**Consequences:**  
+**Pros:**  
 - Easy integration with Flask and Python  
 - Schema-less, flexible design for dynamic data  
 - Less strict data consistency than SQL  
@@ -60,7 +60,7 @@ I considered Django, Flask, and Node.js frameworks.
 I decided to use Flask because it is lightweight, simple to set up, and integrates well with MongoDB.  
 It allows rapid prototyping and provides flexibility for future growth.
 
-**Consequences:**  
+**Pros:**  
 - Easy to build prototypes quickly  
 - Great documentation and community support  
 - Requires manual configuration for larger projects  
