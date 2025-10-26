@@ -66,24 +66,4 @@ It allows rapid prototyping and provides flexibility for future growth.
 - Requires manual configuration for larger projects  
 - Limited built-in admin tools compared to Django  
 
----
-
-### Reflection
-These ADRs form the foundation for the system’s design and development.  
-Choosing a layered architecture with Flask and MongoDB provides flexibility, clarity, and scalability for the prototype phase.  
-This ensures that future development (wireframes and C4 Level 2 design) aligns with the selected technologies.
-
-### C4 Level 1 Context Diagram
-
-The diagram below shows the high-level system context for the Customer Management System (CMS).  
-It illustrates how different external users and systems interact with the CMS through defined communication channels.  
-The CMS acts as the central hub for managing support tickets, problem resolution, and user roles.  
-External interactions include a web browser interface for end-users and an external notification service (Email/SMS) for sending updates.
-
-<img width="1540" height="956" alt="image" src="https://github.com/user-attachments/assets/9ac29e6a-b65d-46c7-8001-dbc6ddceaf02" />
-
-*Figure 1: C4 Level 1 Context Diagram for the Customer Management System.*
-
-The system boundary clearly separates the CMS (internal software system) from its environment, while arrows show data flow directions and responsibilities.  
-This level establishes a foundation for Level 2 (Container Diagram), which will break the CMS into key subsystems such as the frontend, backend API, and database.
 
