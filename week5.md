@@ -81,7 +81,7 @@ Flask-Login was used for session-based authentication, and role checks were adde
 - Prevents unauthorised access
 - Adds slight complexity to route handling
 
-## ADR 015 – SON Response Format
+## ADR 015 – JSON Response Format
 
 **Date:** 20-10-2025
 **Status:** Accepted
