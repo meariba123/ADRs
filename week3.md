@@ -1,7 +1,6 @@
 # Week 3 – Architecture Decision Records (ADRs)
 ## Summary
-Week 3 ADRs focus on communication design (API), secure access control (Authentication), and user interaction (Wireframes/UI). These decisions show architectural refinement and progression from Week 2’s foundational choices, demonstrating continuous, well-documented evolution of the CMS system.
-ADR 004 – API Design and Communication Approach
+Week 3 focused on refining the system’s communication design (API), strengthening secure access control (authentication), and improving user interaction through wireframes and UI planning. These decisions build upon Week 2’s foundational work, showing clear architectural progress and a structured evolution of the CMS system.
 
 ---
 ## ADR 004 – API Design and Communication Approach
@@ -10,16 +9,16 @@ ADR 004 – API Design and Communication Approach
 **Status:** Accepted
 
 **Context:**  
-The CMS requires smooth communication between the frontend (web browser) and backend (Flask server) for operations like logging problems, updating statuses, and confirming resolutions. The options were RESTful APIs, GraphQL, or direct template rendering.
+The CMS needs smooth and reliable communication between the frontend (web browser) and backend (Flask server) for actions like logging issues, updating statuses, and confirming resolutions. The main options considered were RESTful APIs, GraphQL, and direct template rendering.
 
 **Decision:**
-I selected a RESTful API design to handle client-server communication. This allows the frontend and backend to remain loosely coupled, making future integration with mobile apps easier.
+A RESTful API structure was chosen for client-server communication. This design keeps the frontend and backend loosely connected, allowing for easier future integration with mobile or other platforms.
 
-**Consequences:**  
-  - Clear separation between frontend and backend
-  - Easier to scale and extend for new interfaces (e.g., mobile)
-  - Requires defining and testing API routes for CRUD operations
-  - Slightly more setup effort than traditional page rendering
+**Pros:**  
+- Maintains a clear separation between frontend and backend.
+- Easier to scale and extend to other interfaces, such as mobile apps.
+- Requires defining and testing dedicated API routes for CRUD operations.
+- Involves slightly more setup than basic page rendering.
 
 ---
 
@@ -29,16 +28,16 @@ I selected a RESTful API design to handle client-server communication. This allo
 **Status:** Accepted
 
 **Context:**  
-Different users (Consumer, Agent, Support Person, Manager, Admin) require access to different features. I compared using Flask’s built-in session-based authentication, JWT (JSON Web Tokens), and OAuth.
+Different types of users; Consumers, Agents, Support Personnel, Managers, and Admins—need different access levels within the CMS. The options reviewed were Flask’s session-based authentication, JWT (JSON Web Tokens), and OAuth.
 
 **Decision:**  
-I selected Flask-Login for session-based authentication and implemented role-based access control (RBAC) using user roles stored in MongoDB.
+Flask-Login was chosen for session-based authentication, combined with role-based access control (RBAC). User roles are stored in MongoDB and used to determine access rights.
 
-**Consequences:** 
-  - Simple integration with existing Flask routes
-  - Secure session management with login and logout
-  - Easier to manage multiple user roles
-  - Requires extra logic to restrict access for each role
+**Pros:** 
+- Integrates easily with existing Flask routes
+- Provides secure session handling with login and logout functions
+- Simplifies managing multiple user roles
+- Requires additional logic to apply permissions per role
 
 ---
 
@@ -48,13 +47,13 @@ I selected Flask-Login for session-based authentication and implemented role-bas
 **Status:** Accepted
 
 **Context:**
-The CMS must support multiple user dashboards (Consumer, Agent, Manager, Admin) with easy navigation. Options included a single-page dynamic UI (React) or multi-page HTML templates.
+The CMS must include several dashboards (for Consumers, Agents, Managers, and Admins) that are easy to navigate. The options considered were building a single-page app with React or using Flask-rendered HTML templates.
 
 **Decision:**
-I selected a multi-page layout using HTML/CSS/JavaScript templates rendered through Flask routes. Each role has a separate dashboard wireframe showing their key functions (e.g., Report Problem for Consumers, Assign Support Person for Agents).
+A multi-page layout using HTML, CSS, and JavaScript templates rendered through Flask was selected. Each user role has its own dashboard wireframe showing key actions, for example, “Report Problem” for Consumers and “Assign Support Person” for Agents.
 
-**Consequences:**
-  - Easier to design and present wireframes per role
-  - Works well with Flask template engine (Jinja2)
-  - Less dynamic than React-based SPA
-  - Faster to implement and test for coursework scope
+**Pros:**
+- Easier to design and test wireframes specific to each role.
+- Integrates smoothly with Flask’s Jinja2 template engine.
+- Less dynamic than a React single-page application.
+- Quicker to implement and suitable for the project’s timeframe.
