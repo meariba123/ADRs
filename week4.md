@@ -1,7 +1,7 @@
 ## Week 4 – Architecture Decision Records (ADRs)
 ## Summary
 
-During Week 4, I focused on refining the system architecture and finalising the C4 diagrams (Levels 1 to 3). I also developed the data model, ensuring clear relationships between users, complaints, updates, and reports. The following decisions reflect how the design moved from a conceptual overview to a more detailed implementation plan.
+During Week 4, I focused on refining the system architecture and finalising the C4 diagrams (Levels 1 to 3). I also developed the data model to define clear relationships between users, complaints, updates, and reports. These decisions mark the shift from conceptual design to a detailed implementation plan.
 
 --- 
 
@@ -11,15 +11,20 @@ During Week 4, I focused on refining the system architecture and finalising the 
 **Status:** Accepted
 
 **Context:**
-A consistent method was needed to represent the system at different levels of detail. I considered using simple flow diagrams, UML, or the C4 Model.
+A consistent approach was needed to represent the system at different levels of detail. I compared simple flow diagrams, UML diagrams, and the C4 Model.
 
 **Decision:**
-I decided to use the C4 Model to document the architecture. Level 1 shows the overall system and external users, Level 2 breaks the system into containers (Frontend, Backend, Database), and Level 3 focuses on individual backend components such as the API Gateway and data modules.
+The C4 Model was chosen to document the architecture.
+- Level 1 shows the overall system and its external users
+- Level 2 breaks the system into containers such as the frontend, backend, and database
+- Level 3 focuses on detailed backend components like the API gateway and data modules
 
-**Consequences:**
-- Clear and professional presentation of the system’s structure.
-- Helps readers understand both high-level and technical perspectives.
-- Takes more time to complete but makes the documentation more effective.
+**Pros:**
+- Provides a clear and professional representation of the system’s structure
+- Makes it easier to understand both high-level and technical details
+- Requires more time to complete, but improves documentation quality overall
+
+---
 
 ## ADR 008 – Data Model and Entity Relationships
 
@@ -27,15 +32,17 @@ I decided to use the C4 Model to document the architecture. Level 1 shows the ov
 **Status:** Accepted
 
 **Context:**
-To manage users, complaints, and reports effectively, the database structure needed to be carefully planned. I compared using a flat JSON structure or a more formal entity model.
+To manage users, complaints, updates, and reports effectively, a well-structured data model was needed. I considered using a flat JSON layout versus a structured entity-relationship model.
 
 **Decision:**
-I designed an entity diagram with four key entities: User, Complaint, Resolution Update, and Report. Each entity includes its relevant attributes and relationships.
+An entity diagram was created with four main entities: User, Complaint, Resolution Update, and Report. Each entity includes relevant fields and clearly defined relationships.
 
-**Consequences:**
-- Simplifies data management and improves accuracy.
-- Forms a clear foundation for database design.
-- Ensures data consistency across different modules.
+**Pros:**
+- Simplifies data handling and improves accuracy
+- Provides a solid foundation for database implementation
+- Ensures data consistency across different system modules
+
+---
 
 ## ADR 009 – Backend Framework Decision
 
@@ -43,15 +50,17 @@ I designed an entity diagram with four key entities: User, Complaint, Resolution
 **Status:** Accepted
 
 **Context:**
-The backend needed to handle authentication, routing, and database operations efficiently. I compared Flask, Django, and Node.js.
+The backend needed to support authentication, routing, and database operations efficiently. I evaluated Flask, Django, and Node.js.
 
 **Decision:**
-I selected Flask, as it is lightweight, simple to set up, and integrates easily with MongoDB. It also suits the project scale and timeline.
+Flask was selected because it is lightweight, easy to set up, and integrates smoothly with MongoDB. It also fits well with the project’s scale and time constraints.
 
-**Consequences:**
-- Ideal for rapid development.
-- Offers flexibility for future improvements.
-- Requires manual setup for routing and access control.
+**Pros & Cons:**
+- Enables quick and flexible development
+- Allows greater control over routing and configuration
+- Requires more manual setup compared to larger frameworks like Django
+
+--- 
 
 ## ADR 010 – Database and Collection Structure
 
@@ -59,12 +68,12 @@ I selected Flask, as it is lightweight, simple to set up, and integrates easily 
 **Status:** Accepted
 
 **Context:**
-The system requires a database to store all user and complaint data. I considered relational databases (MySQL) and document-based databases (MongoDB).
+The system needed a database to store user information, complaints, and related data. I compared relational databases such as MySQL with document-based databases like MongoDB.
 
 **Decision:**
-I chose MongoDB due to its flexible schema design and compatibility with Flask via the PyMongo library.
+MongoDB was chosen for its flexible, schema-free design and strong compatibility with Flask through the PyMongo library.
 
-**Consequences:**
-- Data can be stored in a natural JSON-like format.
-- CRUD operations are easy to perform.
-- Offers strong scalability for additional features in the future.
+**Pros:**
+- Stores data in a natural, JSON-like format
+- Makes CRUD operations straightforward
+- Scales easily to support future features and enhancements
