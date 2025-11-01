@@ -13,13 +13,10 @@ On the coding side, Flask routes were expanded, user role functionality was test
 **Status:** Accepted
 
 **Context:**
-A detailed Use Case Diagram was created to illustrate the interactions between Consumers, Help Desk Agents, Managers, Support Personnel, and System Administrators. The <<include>> and <<extend>> relationships were applied to highlight dependencies and optional behaviours within use cases.
+A detailed Use Case Diagram was created to illustrate the interactions between Consumers, Help Desk Agents, Managers, Support Person, and System Administrators. The <<include>> and <<extend>> relationships were applied to highlight dependencies and optional behaviours within use cases.
 
 **Decision:**
-The following folder structure was adopted:
-
-
-<img width="584" height="976" alt="image" src="https://github.com/user-attachments/assets/9564e4ea-898b-4a3d-a46e-e68f89c97c87" />
+A detailed Use Case Diagram was created to illustrate the interactions between Consumers, Help Desk Agents, Managers, Support Personnel, and System Administrators. The <<include>> and <<extend>> relationships were applied to highlight dependencies and optional behaviours within use cases.
 
 **Pros:**
 - Provides a clear visual overview of all user–system interactions
