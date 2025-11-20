@@ -7,7 +7,7 @@ This week focused on documenting the software architecture via structural diagra
 
 ## ADR 023 – Structural Architecture Diagram
 
-**Date:** 29-10-2025
+**Date:** 13-11-2025
 **Status:** Accepted
 
 **Context:**
@@ -25,7 +25,7 @@ A Structural Diagram was created showing front end layer, application layer, ser
 
 ## ADR 024 – Route-to-Component Mapping
 
-**Date:** 29-10-2025
+**Date:** 13-11-2025
 **Status:** Accepted
 
 **Context:**
