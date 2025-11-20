@@ -7,7 +7,7 @@ This week focused on transitioning from initial backend setup to refining role h
 
 ## ADR 021 – Initial Role Handling Strategy
 
-**Date:** 12-11-2025
+**Date:** 06-11-2025
 **Status:** Accepted
 
 **Context:**
@@ -25,7 +25,7 @@ A role attribute was added to the user model during account creation. This allow
 
 ## ADR 022 – Basic Backend Route Planning
 
-**Date:** 12-11-2025
+**Date:** 06-11-2025
 **Status:** Accepted
 
 **Context:**
