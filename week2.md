@@ -12,18 +12,30 @@ I also began creating the C4 Level 1 diagram to show the system’s overall cont
 **Status:** Accepted  
 
 **Context:**  
-I needed to choose an architectural style for the Customer Management System (CMS). Options included Monolithic, Microservices, and Layered Architecture.  
-The CMS will manage user roles, problem reports, and notifications, so structure and maintainability are important.
+I needed to choose an architectural style for the Customer Management System (CMS). The system manages different user roles, problem reports, and notifications. It was important that the system was easy to maintain and could be expanded in the future.
+
+The following options were considered:
+
+- Monolithic architecture
+- Microservices architecture
+- Layered architecture
 
 **Decision:**  
-I chose the **Layered Architecture** approach because it clearly separates responsibilities into layers (UI, business logic, and data access).  
-This supports future scalability and makes debugging easier.
+A layered architecture was chosen. This separates the system into three main parts: the user interface, the application logic, and the data access layer.
 
-**Pros:**  
-- Easier maintenance and unit testing  
-- Supports future scalability and modular design  
-- Can introduce slight overhead for smaller systems  
-- Requires careful coordination between layers  
+**Reason for the Decision:** 
+The layered approach makes the system easier to understand, maintain, and test. Compared to microservices, it avoids extra complexity that is not needed for a system of this size. While a simple monolithic structure could work, using layers gives clearer separation of responsibilities within the application.
+
+
+**Consequences:**  
+Benefits:
+- Easier maintenance and debugging
+- Supports unit testing by keeping responsibilities separate
+- Allows the system to grow without major restructuring
+
+Drawbacks:
+- Adds a small amount of overhead due to the use of layers
+- Requires care to keep layers properly separated
 
 ---
 
